@@ -1,0 +1,22 @@
+{
+  "name": "dapp",
+  "version": "1.0.0",
+  "description": "Distributed Appliccation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sniperline047/Dapp.git"
+  },
+  "author": "sniperline047",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sniperline047/Dapp/issues"
+  },
+  "homepage": "https://github.com/sniperline047/Dapp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
