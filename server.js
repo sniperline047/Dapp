@@ -23,6 +23,11 @@ app.post('/',async (req,res) => {
 	res.send(result);
 });
 
+app.get('/get_total_amount', async (req,res) => {
+	var result = await get_total_amount();
+	res.send(result);
+})
+
 app.listen(4000,() => {
 	console.log("App is running on Port 4000");
 });
