@@ -12,7 +12,7 @@ app.get('/',(req,res) => {
 	res.send("Hello to Web 2.0");
 });
 
-app.post('/',async (req,res) => {
+app.post('/info',async (req,res) => {
 	let email = req.body.email;
 	let amount = req.body.amount;
 
