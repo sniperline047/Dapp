@@ -3,7 +3,7 @@ var db_config = {
 	host : '127.0.0.1',
 	user : 'root',
 	password : 'Sniper*047',
-	database : 'webapp'
+	database : 'Dapp'
 }
 
 var connection;

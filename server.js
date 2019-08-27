@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const {save_user_information} = require('./models/server_db');
 
 app.use(bodyParser.json());
 
@@ -8,7 +9,7 @@ app.get('/',(req,res) => {
 	res.send("Hello to Web 2.0");
 });
 
-app.post('/',(req,res) => {
+app.post('/',async (req,res) => {
 	let email = req.body.email;
 	let amount = req.body.amount;
 
@@ -18,10 +19,10 @@ app.post('/',(req,res) => {
 		return_info.message = "Amount should be greater than $1";
 		return res.send(return_info);
 	}
-
-	res.send({"amount" : amount, "email" : email});
+	var result = await save_user_information({"amount": amount, "email": email});
+	res.send(result);
 });
 
 app.listen(4000,() => {
-	console.log("App is running on Port 4000")
+	console.log("App is running on Port 4000");
 });
